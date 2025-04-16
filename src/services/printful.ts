@@ -2,7 +2,7 @@
 
 // API key for Printful
 let PRINTFUL_API_KEY =
-  "DUn79PNQWBmY1psqmwlqnGgx5DPkaQnoOwEZ8F0PaEV4n72bm4Eh3GXnRPEoGkyg";
+  "jBiZ9TgR7THqyNtWlwS7FTH7HdKSv4tiyEg5Rf3U";
 const PRINTFUL_API_URL = "https://api.printful.com";
 
 // Interface for product dimensions
