@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* PhotoAI-inspired color palette */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    /* Primary: Purple */
+    --primary: 265 89% 66%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Light Purple */
+    --secondary: 262 83% 58%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted: Light Gray */
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    /* Accent: Very Light Purple */
+    --accent: 265 89% 96%;
+    --accent-foreground: 265 89% 66%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 265 89% 66%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 265 89% 66%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 262 83% 58%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 265 89% 20%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 265 89% 66%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold tracking-tight;
+  }
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+  .gradient-bg {
+    @apply bg-gradient-to-r from-primary to-secondary;
+  }
+}
+
+/* PhotoAI-inspired custom components */
+@layer components {
+  .hero-section {
+    @apply relative overflow-hidden py-20 md:py-32;
+  }
+  .hero-gradient {
+    @apply absolute inset-0 bg-gradient-to-b from-accent/50 to-background z-0;
+  }
+  .feature-card {
+    @apply rounded-2xl border bg-card p-6 shadow-sm transition-all hover:shadow-md;
+  }
+  .testimonial-card {
+    @apply rounded-2xl border bg-card p-6 shadow-sm;
+  }
+  .cta-button {
+    @apply gradient-bg text-white font-medium rounded-full px-8 py-3 shadow-lg hover:opacity-90 transition-all;
+  }
+}
